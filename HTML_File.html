@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="CSS_File.css">
+    <script type='text/javascript' src="JS_File.js"></script>
+</head>
+<body>
+    <!--canvas-->
+    <canvas id="canvas" height="600" width="860"></canvas>
+    <!--butoane pentru selectia formei cu care se deseneaza-->
+    <div id="toolsPaint">
+        <div id="shapes">
+            <button id="rectangle">Rectangle</button>
+            <button id="ellipse">Ellipse</button>
+            <button id="line">Line</button>
+        </div>
+        <!--inputuri pentru selectia culorilor-->
+        <div class="colors">
+            <label for="color">Color: </label>
+            <input type="color" id="color" oninput="chooseColor(this.value)" />
+            <br />
+            <label for="colorBG">BackgroundColor: </label>
+            <input type="color" id="colorBG" oninput="chooseColorBG(this.value)" />
+        </div>
+        <!--canvas care se va purta ca un progress bar pentru selectia grosimii liniei-->
+        <div>
+            <label for="progressBar" id="pbLabel">Set your line width!</label>
+            <canvas id="progressBar" width="300" height="20"></canvas>
+
+        </div>
+        <!--buton pentru salvare raster-->
+        <div>
+            <button id="saveRaster">Save .png</button>
+
+        </div>
+    </div>
+    <h2>List of Shapes </h2>
+    <!--Lista care afiseaza si de unde se sterg formele desenate-->
+    <ul></ul>
+</body>
+</html>
